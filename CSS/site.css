@@ -6,6 +6,10 @@
     --logo-blue:#3670f8;
   }
 
+  .logofont {
+    font-family: 'Racing Sans One', cursive
+  }
+
   body {
     color: var(--dark-color);
     /* overflow-y:hidden; */
@@ -39,11 +43,9 @@
 
   .bsicon {
     color: #9900FF;
-
   }
     .jsicon {
     color: rgb(226, 211, 4);
-
   }
 
   .html5icon {
@@ -72,13 +74,14 @@ code[class*="language-"],
  @media screen and (max-width: 400px) {
 .responsiveicon {
 font-size: 18vw;
-}
+ }
 }
 
 img {
-
 max-width: 100%;
-
 height: auto;
+}
 
+img.svg-banner {
+  height: 65px;
 }
