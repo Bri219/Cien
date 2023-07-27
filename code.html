@@ -57,16 +57,81 @@
                 <div class="col-lg-8">
                     <pre class="line-numbers">
                         <code class="language-javascript">
-                        //Call Hello World
-                         function HelloWorld() {
-                         alert("hello world!");
-                        }</code>
+                        // Get the values from the UI
+                        // Starts or Controller function/Entry Port
+                        function getValues() {
+                            // Get values from the page
+                            let startValue = document.getElementById("startValue").value;
+                            let endValue = document.getElementById("endValue").value;
+                        
+                        
+                            //We need to validate our input
+                           // Parse into Integers
+                           startValue = parseInt(startValue);
+                           endValue = parseInt(endValue);
+                        
+                          if (Number.isInteger(startValue) && Number.isInteger(endValue)){
+                             // We call generateNumbers
+                             let numbers = generateNumbers(startValue, endValue);
+                             // We call displayNumbers
+                             displayNumbers(numbers);
+                        } else {
+                        alert("You must enter Integers!");
+                        }
+                        
+                        }
+                        
+                        // Generate numbers from the start value to the end value
+                        // Logic Function(s)
+                        function generateNumbers(sValue, eValue) {
+                        
+                        let numbers = [];
+                        
+                        // We want to get all numbers from start to end
+                        for (let index = sValue; index <= eValue; index++){
+                             //This will execute in a loop until index=eValue
+                            numbers.push(index); } return numbers; } 
+                            // Display the numbers and mark the even numbers bold
+                             // Display or view
+                            functions function displayNumbers(numbers) { let templateRows="" ; 
+                            for (let index=0; index < numbers.length;
+                            index++) { 
+                                let className='even' ; let number=numbers[index];
+                                 if (number % 2==0) { className="even" ; }
+                                  else {
+                            className="odd"; 
+                           } 
+                           // Template literals do not render correctly on Prism.
+                           templateRows += `&lt;tr>&lt;td class="${className}" >${number}&lt;/td>&lt;/tr>;
+                            }
+                            document.getElementById("results").innerHTML = templateRows;
+                            }
+                        </code>
                     </pre>
                 </div>
                 <div class="col-lg-4">
                     <p>The Code is structered in one function</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World".</p>
+                    <h2>CIEN</h2>
+                    <p>This code is a JavaScript program that generates a list of numbers between two user-specified values and displays them in a table on a web page. The even numbers are displayed in bold. Here is a step-by-step summary of the code:
+                    <br>    
+                    <br>
+                    1. The `getValues` function is called to get the start and end values from the user interface.
+                    <br>
+                    2. The start and end values are parsed into integers and validated to ensure they are integers.
+                    <br>
+                    3. If the values are valid, the `generateNumbers` function is called to generate an array of numbers between the start and end values.
+                    <br>
+                    4. The `displayNumbers` function is then called to display the generated numbers in a table on the web page.
+                    <br>
+                    5. In the `displayNumbers` function, a loop iterates over each number in the array of generated numbers.
+                    <br>
+                    6. For each number, a class name is assigned based on whether the number is even or odd.
+                    <br>
+                    7. A table row is created for each number with the appropriate class name applied to style the number as bold if it is even.
+                    <br>
+                    8. The table rows are added to the inner HTML of the results element on the web page to display the table of numbers.
+                    <br>
+                    This code demonstrates how JavaScript can be used to interact with the user interface, perform calculations, and manipulate the Document Object Model (DOM) to dynamically update the content of a web page.</p>
                 </div>
             </div>
         </div>
