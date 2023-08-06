@@ -36,7 +36,8 @@
                         <a class="nav-link logofont" href="app.html">The App</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active logofont" aria-current="page" href="code.html">The Code</a>
+                        <a class="nav-link active logofont" aria-current="page"
+                            href="https://github.com/Bri219/Cien">The Code</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link logofont" target="_blank" href="#">Git Repo</a>
@@ -110,28 +111,33 @@
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structered in one function</p>
-                    <h2>CIEN</h2>
-                    <p>This code is a JavaScript program that generates a list of numbers between two user-specified values and displays them in a table on a web page. The even numbers are displayed in bold. Here is a step-by-step summary of the code:
-                    <br>    
+                    <p>The Code is structered in three functions</p>
                     <br>
-                    1. The `getValues` function is called to get the start and end values from the user interface.
+                    <h4 class="functionColor">getValues</h4>
+                    <p>getValues accepts(gets) the user input from the page.
+                        It utilizes <strong>getElementById</strong> to pull the values from the page. It passes those
+                        values to the <strong>generateNumbers</strong> function. The function
+                        <strong>generateNumbers</strong> returns an array of values and passes that array to the
+                        <strong>displayNumbers</strong> function.
+                    </p>
                     <br>
-                    2. The start and end values are parsed into integers and validated to ensure they are integers.
+                    <h4 class="functionColor">generateNumbers</h4>
+                    <p>generateNumbers takes in two parameters, <strong>startValue</strong> and
+                        <strong>endValue</strong>. We create a variable(numbers) that holds an array. A for loop is used
+                        to generate all of the numbers between the <strong>startValue</strong> and
+                        <strong>endValue</strong>.</p>
                     <br>
-                    3. If the values are valid, the `generateNumbers` function is called to generate an array of numbers between the start and end values.
-                    <br>
-                    4. The `displayNumbers` function is then called to display the generated numbers in a table on the web page.
-                    <br>
-                    5. In the `displayNumbers` function, a loop iterates over each number in the array of generated numbers.
-                    <br>
-                    6. For each number, a class name is assigned based on whether the number is even or odd.
-                    <br>
-                    7. A table row is created for each number with the appropriate class name applied to style the number as bold if it is even.
-                    <br>
-                    8. The table rows are added to the inner HTML of the results element on the web page to display the table of numbers.
-                    <br>
-                    This code demonstrates how JavaScript can be used to interact with the user interface, perform calculations, and manipulate the Document Object Model (DOM) to dynamically update the content of a web page.</p>
+                    <h4 class="functionColor">displayNumbers</h4>
+                    <p><strong>displayNumbers</strong> takes in one paramter number.The variable numbers is an array
+                        that holds values between <strong>startValue</strong> and <strong>endValue</strong>. We create a
+                        variable (className) that holds the name of CSS class that we use to bold the numbers.We create
+                        a variable templateRows that will hold the HTML we will write to the page.<br>
+                        A for loop is used to check all of the numbers to see if they are even or odd.The remainder
+                        operator(%)is used to see if the number is divisable by two. If it returns zero then it is even.
+                        If not(else) its odd. The correct className is injected into the HTML row for display. Each
+                        interation of the loop adds to the templateRows variable. At the end of the loop resulting HTML
+                        rows are written to the page.
+                    </p>
                 </div>
             </div>
         </div>

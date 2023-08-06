@@ -6,7 +6,7 @@ function getValues() {
     let endValue = document.getElementById("endValue").value;
 
 
-    //We need to validate our input
+    //We need to validate our input!(Ensure our input values are indeed numbers and not strings!)
     // Parse into Integers
     startValue = parseInt(startValue);
     endValue = parseInt(endValue);
@@ -18,8 +18,7 @@ function getValues() {
         displayNumbers(numbers);
     } else {
         alert("You must enter Integers!");
-    }
-    
+    }   
 }
 
 // Generate numbers from the start value to the end value
@@ -34,7 +33,6 @@ function generateNumbers(sValue, eValue) {
         numbers.push(index);
     }
     return numbers;
-
 }
 
 // Display the numbers and mark the even numbers bold
@@ -50,7 +48,8 @@ function displayNumbers(numbers) {
 
         if (number % 2 == 0) {
             className = "even";
-        }  else {
+        }
+        else {
             className = "odd";
         }
         
